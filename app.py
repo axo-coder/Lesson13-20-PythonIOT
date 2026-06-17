@@ -1,6 +1,10 @@
 from flask import Flask , request , render_template , Blueprint
+from controller.auth_controller import auth_bp
+from config import Config
 
 app = Flask(__name__)
+app.register_blueprint(auth_bp)
+app.secret_key = Config.SECRET_KEY
 
 @app.route("/")
 def index():

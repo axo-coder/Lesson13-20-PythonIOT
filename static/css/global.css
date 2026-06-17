@@ -2,3 +2,44 @@ body{
     background-color: black;
     color: white;
 }
+
+
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glass-table {
+    background: transparent !important;
+}
+
+.glass-table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-table td, .glass-table th {
+    background: transparent !important;
+}
+
+/* Markdown specific styles */
+.markdown-body pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: auto;
+}
+
+.markdown-body code {
+    color: #66d9ef;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.markdown-body pre code {
+    color: inherit;
+    background: transparent;
+    padding: 0;
+}
