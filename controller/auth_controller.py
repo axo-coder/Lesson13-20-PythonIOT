@@ -15,6 +15,9 @@ def login():
         
         if not user_data:
             flash("Invalid username or password")
+            cursor.close()
+            db.close()
+            return render_template
             
         session["username"] = user_data["username"]
         session["user_id"] = user_data["id"]
@@ -22,5 +25,5 @@ def login():
         db.close()
         flash("Login successful!")
         return render_template("dashboard.html")
-    else:
-        return render_template("login.html")
+
+    return render_template("login.html")
